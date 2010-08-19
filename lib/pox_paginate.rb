@@ -29,7 +29,7 @@ module PoxPaginate
 end
 
 if defined? Rails
-  Rails.configuration.after_initialize do
+  Rails.config.after_initialize do
     PoxPaginate.init!
   end
 else
