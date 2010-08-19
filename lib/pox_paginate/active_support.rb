@@ -3,6 +3,6 @@ module PoxPaginate
   end
 end
 
-require "#{PoxPaginate::Root}/pox_paginate/active_support/core_hash_ext"
+require "#{PoxPaginate::Root}/active_support/core_hash_ext"
 
 

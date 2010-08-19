@@ -27,6 +27,7 @@ Gem::Specification.new do |s|
      "lib/pox_paginate/active_resource/xml_format.rb",
      "lib/pox_paginate/active_support.rb",
      "lib/pox_paginate/active_support/core_hash_ext.rb",
+     "lib/pox_paginate/railtie.rb",
      "lib/pox_paginate/remote_collection.rb",
      "lib/pox_paginate/will_paginate.rb",
      "lib/pox_paginate/will_paginate/collection_extensions.rb",
