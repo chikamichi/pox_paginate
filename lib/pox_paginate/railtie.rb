@@ -9,11 +9,11 @@ module PoxPaginate
   class Railtie < Rails::Railtie
     config.after_initialize do
       $stderr.puts "deferred loading"
-      require "#{PoxPaginate::Root}/pox_paginate/active_support"
-      require "#{PoxPaginate::Root}/pox_paginate/remote_collection"
-      require "#{PoxPaginate::Root}/pox_paginate/active_resource"
-      require "#{PoxPaginate::Root}/pox_paginate/will_paginate"
-      require "#{PoxPaginate::Root}/pox_paginate/xml_mini"
+      require "#{PoxPaginate::Root}/active_support"
+      require "#{PoxPaginate::Root}/remote_collection"
+      require "#{PoxPaginate::Root}/active_resource"
+      require "#{PoxPaginate::Root}/will_paginate"
+      require "#{PoxPaginate::Root}/xml_mini"
     end
   end
 end
