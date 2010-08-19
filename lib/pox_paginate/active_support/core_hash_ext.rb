@@ -1,5 +1,4 @@
 class Hash
-
   class << self
     alias_method :from_xml_without_extension, :from_xml
   end
@@ -18,5 +17,4 @@ class Hash
     end
     deserialized_xml
   end
-
 end
