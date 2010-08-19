@@ -1,7 +1,7 @@
 class Hash
   class << self
+    $stderr.puts ">>>> custom"
     def from_xml(xml)
-      $stderr.puts "TEST"
       typecast_xml_value(unrename_keys(remove_pagination_attributes(::ActiveSupport::XmlMini.parse(xml))))
      #typecast_xml_value(unrename_keys(ActiveSupport::XmlMini.parse(xml)))
     end
