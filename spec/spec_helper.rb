@@ -1,9 +1,5 @@
-require 'rubygems'
-gem 'rspec', '~> 1.3.0'
-gem 'activerecord', '~> 2.3.5'
-gem 'activeresource', '~> 2.3.5'
-
 require 'pp'
+require 'rubygems'
 require 'spec'
 require 'active_record'
 

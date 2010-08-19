@@ -8,11 +8,9 @@
 # See the License for the specific language governing permissions and limitations under the License. 
 
 require 'rubygems'
-gem 'activeresource', '~> 2.3.5'
-gem 'activesupport', '~> 2.3.5'
 require 'active_resource'
-require 'active_support'
 require 'will_paginate'
+require 'active_support'
 
 module PoxPaginate
   Root = File.dirname(__FILE__)

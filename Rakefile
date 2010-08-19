@@ -1,7 +1,3 @@
-require 'rubygems'
-gem 'activesupport', '~> 2.3.5'
-gem 'rspec', '~> 1.3.0'
-
 require 'spec'
 require 'spec/rake/spectask'
 
@@ -12,6 +8,7 @@ namespace :spec do
   desc "Run all unit specs"
   Spec::Rake::SpecTask.new(:unit) do |task|
     task.spec_files = FileList['spec/pox_paginate/**/*_spec.rb']
+    # task.spec_opts = ['--options', 'spec/spec.opts']
   end
 end
 
@@ -19,21 +16,18 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gemspec|
     gemspec.name = "pox_paginate"
-    gemspec.summary = "Transparent support for pagination using WillPaginate with POX (Plain Old Xml) and ActiveResource"
-    gemspec.description = "Transparent support for pagination using WillPaginate with POX (Plain Old Xml) and ActiveResource. This gem is based on C42 Engineering's experience building largish distributed systems consisting of multiple Rails apps integrated over POX (Plain Old XML)."
-    gemspec.authors = ["Sidu Ponnappa", "Niranjan Paranjape"]
-    gemspec.email = "opensource@c42.in"
-    gemspec.homepage = "http://c42.in/open_source"
+    gemspec.summary = "Transparent support for pagination using WillPaginate using POX (Plain Old Xml) and ActiveResource"
+    gemspec.description = "Wrest is a HTTP and REST client library which allows you to quickly build well encapsulated, object oriented wrappers around any web service."
+    gemspec.authors = ["Sidu Ponnappa", "Niranjan Paranjape", "Gastón Ramos"]
+    gemspec.email = "ramos.gaston@gmail.com"
+    gemspec.homepage = "http://github.com/gramos/pox_paginate"
     gemspec.has_rdoc = false
     gemspec.require_path = "lib"
     gemspec.files.exclude *['.gitignore']
-
     gemspec.test_files.exclude *['.gitignore']
-    gemspec.add_dependency('activesupport', '~> 2.3.5')
-    gemspec.add_dependency('activeresource', '~> 2.3.5')
-    gemspec.add_dependency('will_paginate', '~> 2.3.12')
-    gemspec.add_development_dependency('rspec', '~> 1.3.0')
-    gemspec.add_development_dependency('activerecord', '~> 2.3.5')
+    gemspec.add_dependency('activesupport', '>= 3.0.0.rc')
+    gemspec.add_dependency('activeresource', '>= 3.0.0.rc')
+    gemspec.add_dependency('will_paginate', '>= 2.3.12')
   end
 
   Jeweler::GemcutterTasks.new
