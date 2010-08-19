@@ -8,8 +8,6 @@ module PoxPaginate
 
   class Railtie < Rails::Railtie
     config.after_initialize do
-      $stderr.puts "deferred loading"
-      $stderr.puts PoxPaginate::Root.inspect
       require "#{PoxPaginate::Root}/active_support"
       require "#{PoxPaginate::Root}/remote_collection"
       require "#{PoxPaginate::Root}/active_resource"
