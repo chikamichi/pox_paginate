@@ -4,7 +4,7 @@ module PoxPaginate
       def self.included(mod)
         mod.module_eval do
           def decode_with_pagination_support(xml)
-            unless xml.nil?
+            unless xml.blank?
               deserialised_xml = decode_without_pagination_support(xml)
               root_attributes = ::ActiveSupport::XmlMini.root_node_attributes(xml)
               if root_attributes['type'] == "array" && root_attributes['current_page']
